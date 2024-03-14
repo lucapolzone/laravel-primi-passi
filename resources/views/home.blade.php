@@ -9,9 +9,20 @@
   <h1> {{ $title }}</h1>
   <p> {{ $paragraph }}</p>
   <ul>
-    @foreach ($teachers as $teacher)
-      <li> {{ $teacher }} </li>
-    @endforeach
+    <!-- @if (!empty($teachers))
+      @foreach ($teachers as $teacher)
+        <li> {{ $teacher }} </li>
+      @endforeach
+    @else
+    <li>Nessun Insegnante</li>
+    @endif -->
+    <!-- Stesso risultato -->
+
+    @forelse ($teachers as $teacher)
+      <li>{{ $teacher }}</li>
+    @empty  
+      <li>Nessun insegnante</li>
+    @endforelse
   </ul>
 </body>
 </html>
