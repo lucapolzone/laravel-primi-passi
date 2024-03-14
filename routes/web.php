@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 	$title = 'Hello world';
 	$paragraph = 'Lorem ipsum dolor sit amet';
-	$teachers = ['Luigi', 'Mattia', 'Tiziano'];
+	// $teachers = ['Luigi', 'Mattia', 'Tiziano'];
+	$teachers = config('teachers');
 
 	return view('home', compact('title', 'paragraph','teachers'));
 });
