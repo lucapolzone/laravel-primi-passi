@@ -20,6 +20,7 @@
 
     @forelse ($teachers as $teacher)
       <li>{{ $teacher }}</li>
+      @dump($loop)
     @empty  
       <li>Nessun insegnante</li>
     @endforelse
